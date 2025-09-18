@@ -1,0 +1,32 @@
+<div class="summary-container">
+  <ng-container *ngIf="company$ | async as company">
+    <div class="company-info">
+      <h2>{{ company.name }}</h2>
+      <p>{{ company.address }}</p>
+      <p>Phones: {{ company.phones.join(', ') }}</p>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="items$ | async as items">
+    <div *ngIf="items.length > 0; else noItems">
+      <div class="grid-header">
+        <div>Name</div>
+        <div>Count</div>
+        <div>Price</div>
+        <div>Subtotal</div>
+      </div>
+      <div class="grid-row" *ngFor="let item of items">
+        <div>{{ item.name }}</div>
+        <div>{{ item.count }}</div>
+        <div>{{ item.price }}</div>
+        <div>{{ item.count * item.price }}</div>
+      </div>
+      <div class="grid-footer">
+        Total: {{ total$ | async }}
+      </div>
+    </div>
+    <ng-template #noItems>
+      <p>No items</p>
+    </ng-template>
+  </ng-container>
+</div>

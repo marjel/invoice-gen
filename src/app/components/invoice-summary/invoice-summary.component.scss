@@ -1,0 +1,27 @@
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.company-info {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+.grid-header, .grid-row, .grid-footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.grid-header {
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.grid-footer {
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+}
