@@ -17,4 +17,3 @@ export const selectCompanyError = createSelector(
   selectCompanyState,
   (state) => state.error
 );
-export {};

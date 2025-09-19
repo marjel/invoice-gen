@@ -15,4 +15,3 @@ export class CompanyService {
         return this.http.get<Company>(this.url);
     }
 }
-export {};

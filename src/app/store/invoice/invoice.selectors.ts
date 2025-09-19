@@ -13,4 +13,3 @@ export const selectInvoiceTotal = createSelector(
   (state) =>
     state.items.reduce((total, item) => total + item.count * item.price, 0)
 );
-export {};

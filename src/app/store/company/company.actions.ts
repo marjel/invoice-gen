@@ -12,4 +12,3 @@ export const loadCompanyFailure = createAction(
   '[Company] Load Company Failure',
   props<{ error: any }>()
 );
-export {};

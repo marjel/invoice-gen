@@ -20,4 +20,3 @@ export const companyReducer = createReducer(
   on(loadCompanySuccess, (state, { company }) => ({ ...state, loading: false, company })),
   on(loadCompanyFailure, (state, { error }) => ({ ...state, loading: false, error }))
 );
-export {}; 

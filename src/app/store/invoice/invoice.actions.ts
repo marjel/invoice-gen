@@ -7,4 +7,3 @@ export const addItems = createAction(
 );
 
 export const clearItems = createAction('[Invoice] Clear Items');
-export {};

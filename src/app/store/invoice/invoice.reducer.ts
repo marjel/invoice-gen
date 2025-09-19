@@ -15,4 +15,3 @@ export const invoiceReducer = createReducer(
   on(addItems, (state, { items }) => ({ ...state, items })),
   on(clearItems, (state) => ({ ...state, items: [] }))
 );
-export {};
