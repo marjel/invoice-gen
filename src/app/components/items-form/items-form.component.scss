@@ -1,9 +1,17 @@
-.form-container {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
 .item-row {
   display: flex;
-  gap: 8px;
+  align-items: flex-start;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.form-control-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  color: red;
+  font-size: 0.8em;
+  margin-bottom: 2px;
 }

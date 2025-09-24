@@ -9,7 +9,7 @@ import { Company } from '../models/company.model';
 export class CompanyService {
 
     private http: HttpClient = inject(HttpClient);
-    private url = 'assets/company.json';
+    private url = '/assets/data/company.json';
   
     getCompany(): Observable<Company> {
         return this.http.get<Company>(this.url);

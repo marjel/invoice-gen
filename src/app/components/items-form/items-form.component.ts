@@ -22,10 +22,6 @@ export class ItemsFormComponent {
     items: this.fb.array([])
   });
 
-  constructor() {
-    this.addItem();
-  }
-
   get items() {
     return this.form.get('items') as FormArray;
   }

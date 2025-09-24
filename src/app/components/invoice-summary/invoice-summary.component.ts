@@ -7,12 +7,13 @@ import { CommonModule } from '@angular/common';
 import { selectCompany } from '../../store/company/company.selectors';
 import { loadCompany } from '../../store/company/company.actions';
 import { selectInvoiceItems, selectInvoiceTotal } from '../../store/invoice/invoice.selectors';
+import { PhonesPipe } from '../../pipes/phones.pipe';
 
 @Component({
   selector: 'app-invoice-summary',
   templateUrl: './invoice-summary.component.html',
   styleUrls: ['./invoice-summary.component.scss'],
-  imports: [CommonModule],
+  imports: [CommonModule, PhonesPipe],
 })
 export class InvoiceSummaryComponent implements OnInit {
   

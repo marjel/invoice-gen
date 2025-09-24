@@ -1,28 +1,30 @@
 <form [formGroup]="form">
   <div formArrayName="items">
-    <div *ngFor="let group of items.controls; let i = index" [formGroupName]="i">
-      
-      <input type="text" formControlName="name" placeholder="Item name">
-      <div class="error" *ngIf="group.get('name')?.touched && group.get('name')?.invalid">
-        <span *ngIf="group.get('name')?.hasError('required')">Name is required.</span>
-        <span *ngIf="group.get('name')?.hasError('minlength')">Name must be at least 3 chars.</span>
-        <span *ngIf="group.get('name')?.hasError('maxlength')">Name max length is 30.</span>
+    <div *ngFor="let group of items.controls; let i = index" [formGroupName]="i" class="item-row">
+       <div class="form-control-wrapper">
+        <input type="text" formControlName="name" placeholder="Item name">
+        <div class="error" *ngIf="group.get('name')?.touched && group.get('name')?.invalid">
+          <span *ngIf="group.get('name')?.hasError('required')">Name is required.</span>
+          <span *ngIf="group.get('name')?.hasError('minlength')">Name must be at least 3 chars.</span>
+          <span *ngIf="group.get('name')?.hasError('maxlength')">Name max length is 30.</span>
+        </div>
       </div>
-
-      <input type="number" formControlName="count" placeholder="Count">
-      <div class="error" *ngIf="group.get('count')?.touched && group.get('count')?.invalid">
-        <span *ngIf="group.get('count')?.hasError('required')">Count is required.</span>
-        <span *ngIf="group.get('count')?.hasError('min')">Min is 1.</span>
-        <span *ngIf="group.get('count')?.hasError('max')">Max is 100.</span>
+      <div class="form-control-wrapper">
+        <input type="number" formControlName="count" placeholder="Count">
+        <div class="error" *ngIf="group.get('count')?.touched && group.get('count')?.invalid">
+          <span *ngIf="group.get('count')?.hasError('required')">Count is required.</span>
+          <span *ngIf="group.get('count')?.hasError('min')">Min is 1.</span>
+          <span *ngIf="group.get('count')?.hasError('max')">Max is 100.</span>
+        </div>
       </div>
-
-      <input type="number" formControlName="price" placeholder="Price">
-      <div class="error" *ngIf="group.get('price')?.touched && group.get('price')?.invalid">
-        <span *ngIf="group.get('price')?.hasError('required')">Price is required.</span>
-        <span *ngIf="group.get('price')?.hasError('min')">Min is 1.</span>
-        <span *ngIf="group.get('price')?.hasError('max')">Max is 1,000,000.</span>
+      <div class="form-control-wrapper">
+        <input type="number" formControlName="price" placeholder="Price">
+        <div class="error" *ngIf="group.get('price')?.touched && group.get('price')?.invalid">
+          <span *ngIf="group.get('price')?.hasError('required')">Price is required.</span>
+          <span *ngIf="group.get('price')?.hasError('min')">Min is 1.</span>
+          <span *ngIf="group.get('price')?.hasError('max')">Max is 1,000,000.</span>
+        </div>
       </div>
-
       <button type="button" (click)="removeItem(i)">Remove</button>
     </div>
   </div>
